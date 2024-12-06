@@ -1,23 +1,37 @@
 console.log("Fist one is your answer and the second one is the machine")
 let getHumanChoice = prompt("Choose your option")
 if (getHumanChoice.toLowerCase() === "rock") {
-    console.log("Rock");
+    getHumanChoice = "Rock";
 } else if (getHumanChoice.toLowerCase() === "paper") {
-    console.log("Paper");
+    getHumanChoice = "Paper";
 } else if (getHumanChoice.toLowerCase() === "scissors") {
-    console.log("Scissors");
+    getHumanChoice = "Scissors";
 } else {
-    console.log("Please select a valid option");
+    getHumanChoice = "Please select a valid option";
 }
 
 let randomNumber = Math.floor(Math.random() * 3) + 1;
 function getComputerChoice (randomNumber) {
     if (randomNumber === 1) {
-        return console.log("Rock");
+        return ("Rock");
     } else if (randomNumber === 2) {
-        return console.log("Paper");
-    } else {
-        return console.log("Scissors");
+        return ("Paper");
+    } else if (randomNumber === 3) {
+        return ("Scissors");
     }
 }
-console.log(getComputerChoice(randomNumber));
+
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound (humanChoice, computerChoice) {
+
+}
+
+const humanSelection = getHumanChoice;
+const computerSelection = getComputerChoice(randomNumber);
+
+playRound(humanSelection, computerSelection);
+
+console.log(humanSelection);
+console.log(computerSelection);
